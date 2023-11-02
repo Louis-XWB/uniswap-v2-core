@@ -43,7 +43,8 @@ Uniswap V1 是这个协议在 2018 年推出的第一个主要版本，而 V2 �
 
 V2 的代码分为两个仓库，一个是 [uniswap-v2-core](https://github.com/Louis-XWB/uniswap-v2-core)，另一个是 [uniswap-v2-periphery](https://github.com/Louis-XWB/uniswap-v2-periphery)。
 
-其中，`uniswap-v2-core` 是 Uniswap V2 的核心代码，包括 Uniswap V2 的核心合约、工厂合约、路由合约等。`uniswap-v2-periphery` 则是 Uniswap V2 的外围代码，包括 Uniswap V2 的接口、帮助函数、测试代码等。
+* `uniswap-v2-core` : Uniswap V2 的核心代码，包括 Uniswap V2 的核心合约、工厂合约、路由合约等。
+* `uniswap-v2-periphery` : Uniswap V2 的外围代码，包括 Uniswap V2 的接口、帮助函数、测试代码等。
 
 ### uniswap-v2-core
 
