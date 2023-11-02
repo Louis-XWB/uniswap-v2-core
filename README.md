@@ -54,7 +54,7 @@ V2 的代码分为两个仓库，一个是 [uniswap-v2-core](https://github.com/
 
 * [UniswapV2Factory.sol](https://github.com/Louis-XWB/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) - 工厂合约，用于创建新的 Pair 合约（以及设置协议手续费接收地址）
 
-* [UniswapV2Pair.sol](https://github.com/Louis-XWB/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) Pair（交易对）合约，定义和交易有关的几个最基础方法，如 swap/mint/burn，价格预言机等功能，其本身是一个 ERC20 合约，继承 `UniswapV2ERC20`
+* [UniswapV2Pair.sol](https://github.com/Louis-XWB/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) - Pair（交易对）合约，定义和交易有关的几个最基础方法，如 swap/mint/burn，价格预言机等功能，其本身是一个 ERC20 合约，继承 `UniswapV2ERC20`
 
 ### uniswap-v2-periphery
 
