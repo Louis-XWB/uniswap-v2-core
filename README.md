@@ -47,7 +47,7 @@ V2 的代码分为两个仓库，一个是 [uniswap-v2-core](https://github.com/
 
 ### uniswap-v2-core
 
-专注于处理 LP(Liquidity Provider) 的创建和管理，手续费设定，以及代币的铸造(mint)、销毁(burn)和交换(swap)等核心功能，不涉及数据转换等额外操作。
+专注于处理 LP(Liquidity Provider) 的创建和管理，手续费设定，以及代币的铸造(`mint`)、销毁(`burn`)和交换(`swap`)等核心功能，不涉及数据转换等额外操作。
 
 [UniswapV2ERC20.sol](https://github.com/Louis-XWB/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) - ERC20 合约，实现 ERC20 标准方法
 
