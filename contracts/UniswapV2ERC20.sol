@@ -17,6 +17,9 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
     mapping(address => mapping(address => uint)) public allowance; // 每个地址对其他地址的代币授权余额
 
     // 是用于不同DApp之间区分相同结构和内容的签名消息，该值有助于用户辨识哪些为信任的DApp
+    // 当用户想要授权一个操作（比如在不发送交易的情况下允许代币的花费）时，他们会在他们的钱包软件中对一条消息进行签名。
+    // 这条消息包含了他们想要授权的信息，以及DOMAIN_SEPARATOR。当他们的签名被提交到合约时，
+    // 合约会使用DOMAIN_SEPARATOR来确认签名的有效性，并确保它是为该合约实例和当前链上的行动创建的。
     bytes32 public DOMAIN_SEPARATOR;
 
     // 用于keccak256方法的参数
@@ -36,13 +39,14 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
             // 内联汇编获取当前链的ID
             chainId := chainid
         }
+        
         DOMAIN_SEPARATOR = keccak256(
             abi.encode(
                 keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
                 keccak256(bytes(name)),
                 keccak256(bytes('1')),
-                chainId,
-                address(this)
+                chainId,// 当前链的ID，确保签名是对特定链有效，防止在多条链上重放攻击
+                address(this) // 合约本身的地址，用于验证签名是为这个特定合约创建的
             )
         );
     }
